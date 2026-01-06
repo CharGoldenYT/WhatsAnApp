@@ -40,7 +40,7 @@ If you're using MacOS, I dunno. If it doesn't launch, you're on your own because
 ## Building WhatsAnApp:
 In Linux Ubuntu, here are the steps:
 ```bash
-sudo apt update && yes | sudo apt install python3 python3-pip python3-venv libgirepository-2.0-dev gir1.2-gtk-3.0 gir1.2-webkit2-4.1 cmake libcanberra-gtk-module libcanberra-gtk3-module xvfb pkg-config python3-cairo
+sudo apt update && yes | sudo apt install python3 python3-pip python3-venv libgirepository-2.0-dev gir1.2-gtk-3.0 gir1.2-webkit2-4.1 cmake libcanberra-gtk-module libcanberra-gtk3-module xvfb pkg-config python3-cairo libcairo2-dev
 git clone https://github.com/daveberrys/WhatsAnApp/
 cd WhatsAnApp
 rm -rf .git
