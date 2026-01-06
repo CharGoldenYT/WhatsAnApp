@@ -22,7 +22,7 @@ jobs:
                     artifact-name: WhatsAnApp-Linux
                   - os: windows-latest
                     os-name: Windows
-                    artifact-path: dist/WhatsAnApp-Windows
+                    artifact-path: dist/WhatsAnApp-Windows.exe
                     artifact-name: WhatsAnApp-Windows
                   - os: macos-latest
                     os-name: MacOS
