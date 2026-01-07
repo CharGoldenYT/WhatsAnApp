@@ -55,7 +55,7 @@ venv/bin/pip install -r requirements.txt
 venv/bin/python main.py
 ```
 <details>
-    <summary>Screenshot Preview (By [Daveberry](https://daveberry.netlify.app/))</summary>
+    <summary>Screenshot Preview (By Daveberry)</summary>
     <img src="readme/Linux (Daveberry).png"/>
 </details>
 
@@ -74,7 +74,7 @@ venv\Scripts\python main.py
     <p>No one yet. Maybe you could help?</p>
 </details>
 
-In MacOS, here are the steps: (Confirmed by [@TK50P](https://github.com/tk50p))
+In MacOS, here are the steps: (Confirmed by [@TK50P](https://www.tk50piscool.kro.kr/))
 ```bash
 git clone https://github.com/daveberrys/WhatsAnApp/
 cd WhatsAnApp

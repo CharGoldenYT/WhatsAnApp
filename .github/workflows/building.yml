@@ -37,26 +37,24 @@ jobs:
               with:
                 python-version: ${{ env.pythonVersion }}
 
-            - name: Install Qt dependencies (Linux)
+            - name: Install Qt system dependencies (Linux)
               if: runner.os == 'Linux'
               run: |
                 sudo apt update
                 sudo apt install -y python3-pip python3-venv xvfb libxcb-cursor0 libxcb-xinerama0 libxkbcommon-x11-0
-                
-            - name: Install Python dependencies (Linux/MacOS)
-              if: runner.os != 'Windows'
-              run: |
-                python -m pip install --upgrade pip
-                pip install -r requirements.txt
             
-            - name: Install Python dependencies (Windows)
-              if: runner.os == 'Windows'
+            - name: Install Python dependencies (Windows/MacOS)
+              if: runner.os != "Linux"
               run: |
                 python -m pip install --upgrade pip
-                pip install -r requirements.txt
-
+                pip install -r python/requirements.txt
+                
+            - name: Install Python dependencies (Linux)
+              if: runner.os == 'Linux'
+              run: pip install -r python/requirements-linux.txt
+            
             - name: Compile with PyInstaller
-              run: pyinstaller WhatsAnApp.spec
+              run: pyinstaller python/WhatsAnApp.spec
 
             - name: Rename Build (Windows)
               if: runner.os == 'Windows'

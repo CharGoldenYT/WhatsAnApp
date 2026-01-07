@@ -11,17 +11,27 @@ if sys.platform == "win32":
 else:
     icon_file = "assets/WhatsAnApp.png"
 
+if sys.platform == "linux":
+    hidimports = [
+        'pywebview',
+        'flask',
+        'qtpy',
+        'PyQT5',
+        'PyQT5.QtWebEngineWidgets'
+    ]
+else:
+    hidimports = [
+        'pywebview',
+        'flask'
+    ]
+    
 a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=binaries_wv,
     datas=[('assets', 'assets')] + datas_wv,
     hiddenimports=[
-        'pywebview', 
-        'flask', 
-        'qtpy', 
-        'PyQt5',
-        'PyQt5.QtWebEngineWidgets'
+        hidimports
     ] + hiddenimports_wv,
     hookspath=[],
     hooksconfig={},

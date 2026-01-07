@@ -1,5 +1,6 @@
 flask
 pywebview
-PyQt5
 pyinstaller
+PyQT5
 PyQtWebEngine
+qtpy
