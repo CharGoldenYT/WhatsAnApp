@@ -35,7 +35,7 @@ Available in:
 ## Required Dependencies (to open the app):
 If you're using Linux Ubuntu, then run this command below:
 ```bash
-sudo apt install python3 python3-pip python3-venv xvfb libxcb-cursor0 libxcb-xinerama0 libxkbcommon-x11-0
+sudo apt install xvfb libxcb-cursor0 libxcb-xinerama0 libxkbcommon-x11-0
 ```
 I dunno about other distros through. Good luck finding it because I use DistroBox with Ubuntu. (Confirmed by [@Daveberrys](https://daveberry.netlify.app/))
 
