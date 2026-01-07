@@ -1,17 +1,36 @@
 # -*- mode: python ; coding: utf-8 -*-
+import sys
+import os
+from PyInstaller.utils.hooks import collect_all
+
+# Collect metadata/binaries for Webview
+datas_wv, binaries_wv, hiddenimports_wv = collect_all('webview')
+
+if sys.platform == "win32":
+    icon_file = "assets/WhatsAnApp.ico"
+else:
+    icon_file = "assets/WhatsAnApp.png"
 
 a = Analysis(
     ['main.py'],
     pathex=[],
-    binaries=[],
-    datas=[('assets', 'assets')],
-    hookspath=['hooks'],
+    binaries=binaries_wv,
+    datas=[('assets', 'assets')] + datas_wv,
+    hiddenimports=[
+        'pywebview', 
+        'flask', 
+        'qtpy', 
+        'PyQt5',
+        'PyQt5.QtWebEngineWidgets'
+    ] + hiddenimports_wv,
+    hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
     excludes=[],
     noarchive=False,
     optimize=0,
 )
+
 pyz = PYZ(a.pure)
 
 exe = EXE(
@@ -32,5 +51,6 @@ exe = EXE(
     argv_emulation=False,
     target_arch=None,
     codesign_identity=None,
-    entitlements_file=None
+    entitlements_file=None,
+    icon=icon_file
 )

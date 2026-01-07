@@ -13,14 +13,15 @@ whereCSS = "assets/style.css"
 whereJS = "assets/script.js"
 
 if sys.platform == "win32":
-    appConfig = os.path.expanduser("~/Appdata/Roaming/")
+    appConfig = os.path.expanduser("~\\Appdata\\Roaming\\")
+    #                              stupid ass windows
 elif sys.platform == "linux":
     appConfig = os.path.expanduser("~/.config/")
 elif sys.platform == "darwin":
     appConfig = os.path.expanduser("~/Library/Application Support/")
 else:
     print("Could not identify OS! Falling back...")
-    appConfig = "." # when the library doesn't detect the OS, it'll make a dotfolder instead.
+    appConfig = "~/." # when the library doesn't detect the OS, it'll make a dotfolder instead.
 
 fullAppConfig = appConfig + appID + "/"
 
@@ -64,7 +65,7 @@ wv.start(
     private_mode=False,
     
     # Debugging purposes.
-    debug=True
+    # debug=True
 )
 
 print("--------------------------------")
