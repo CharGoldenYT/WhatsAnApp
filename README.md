@@ -51,8 +51,8 @@ git clone https://github.com/daveberrys/WhatsAnApp/
 cd WhatsAnApp
 rm -rf .git
 python3 -m venv venv
-venv/bin/pip install -r requirements.txt
-venv/bin/python main.py
+venv/bin/pip install -r python/requirements-linux.txt
+venv/bin/pyinstaller WhatsAnApp.spec
 ```
 <details>
     <summary>Screenshot Preview (By Daveberry)</summary>
@@ -65,8 +65,8 @@ git clone https://github.com/daveberrys/WhatsAnApp/
 cd WhatsAnApp
 rd /s /q .git
 python3 -m venv venv
-venv\Scripts\pip install -r requirements.txt
-venv\Scripts\python main.py
+venv\Scripts\pip install -r python/requirements.txt
+venv\Scripts\pyinstaller WhatsAnApp.spec
 ```
 <details>
     <summary>Screenshot Preview (NOT EXSISTANT)</summary>
@@ -80,8 +80,8 @@ git clone https://github.com/daveberrys/WhatsAnApp/
 cd WhatsAnApp
 rm -rf .git
 python3 -m venv venv
-venv\bin\pip install -r requirements.txt
-venv\bin\python main.py
+venv/bin/pip install -r python/requirements.txt
+venv/bin/pyinstaller WhatsAnApp.spec
 ```
 <details>
     <summary>Screenshot Preview (By TK50P)</summary>
