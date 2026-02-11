@@ -12,25 +12,19 @@
 </div>
 
 > [!CAUTION]
-> Use this at your own risk. We are not responsible if your account was deleted, even if it's a UI Modification.
+> Use this at your own risk. We are not responsible if your account was deleted, even if it's a native-app feel.
 
 > [!NOTE]
 > We've gone ahead and done a 180 and made a native app instead. I (Daveberry) found out that it uses less RAM than native windows, so why not make this an alternative to the native Whatsapp app? And we're completely removing the UI change, but still keeping loading themes.
 
 > [!WARNING]
-> Linux version of this app is currently a bit stupid. At 140+ mb compiled. We'll try to find a fix, don't worry.
+> Linux version of this app is currently a bit stupid. At 140+ mb compiled. We'll try to find a fix, don't worry fellow Linux users.
 
 ---
 
-WhatsAnApp (Also known as What's an app?) is a UI modification to WhatsApp's Shitty UI and Removing unwanted features.
+WhatsAnApp (Also known as What's an app?) is a native-app feel and less usage of your memory.
 
-WhatsAnApp is a UI modification. Not a full modification for WhatsApp. We're not trying to get our ass sued by Meta.
-
----
-
-WhatsAnApp is a python project based app using Flask and PyWebView. Making it easier yet having more control without fucking around and fetching their API and getting our ass sued.
-
-We believe that we deserve a Better UI than whatever the fuck they made. Going all in with the UI change.
+The full native version of Whatsapp is too bloated, taking about 1-2+ **GB** of memory usage due to electron. WhatsAnApp only takes about 50-100 **MB** using PyWebView and Python. We could probably achieve less by using Rust, but Python is good enough.
 
 ---
 
