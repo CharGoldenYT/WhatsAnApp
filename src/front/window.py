@@ -21,8 +21,8 @@ def startUp(debugWaa=False, debugYes=False):
         #             w.evaluate_js(f.read())
 
     wv.create_window(
-        'WhatsAnApp - A better native whatsapp expirence.',
-        'https://example.com',
+        'WhatsAnApp',
+        'https://web.whatsapp.com/',
         width=1280,
         height=720
     )
