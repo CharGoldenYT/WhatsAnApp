@@ -21,7 +21,7 @@ def startUp(debugMode=False):
         #         with open(whereJS, "r") as f:
         #             w.evaluate_js(f.read())
 
-    wv.create_window("WhatsAnApp", "https://example.com/", width=1280, height=720)
+    wv.create_window("WhatsAnApp", "https://web.whatsapp.com/", width=1280, height=720)
     # waaWindow.events.loaded += lambda: injections(waaWindow)
 
     projectRoot = os.path.dirname(os.path.abspath(__file__))
