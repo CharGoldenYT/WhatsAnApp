@@ -1,7 +1,7 @@
 <div align="center">
     <img src="assets/WhatsAnApp.png" width=250>
     <h1>WhatsAnApp</h1>
-    <p>WhatsApp, with a sleek and modified UI.</p>
+    <p>WhatsApp, if it were more comfortable to keep in your computer.</p>
 </div>
 
 <div align="center">
@@ -13,6 +13,12 @@
 
 > [!CAUTION]
 > Use this at your own risk. We are not responsible if your account was deleted, even if it's a UI Modification.
+
+> [!NOTE]
+> We've gone ahead and done a 180 and made a native app instead. I (Daveberry) found out that it uses less RAM than native windows, so why not make this an alternative to the native Whatsapp app? And we're completely removing the UI change, but still keeping loading themes.
+
+> [!WARNING]
+> Linux version of this app is currently a bit stupid. At 140+ mb compiled. We'll try to find a fix, don't worry.
 
 ---
 
@@ -34,11 +40,9 @@ Python Project
   v
 Libraries:
 - PyWebView
-- Flask
 - PyInstaller
   v
-Flask runs a local server (https://web.whatsapp.com)
-PyWebView makes a new indow and injects code (CSS/JS)
+PyWebView makes a new window, and opens the whatsapp website.
 Python handles reading files, creating new files, editing, and such.
 PyInstaller compiles the project into one file.
   v
@@ -71,19 +75,18 @@ If you're using Linux Ubuntu, then run this command below:
 ```bash
 sudo apt install xvfb libxcb-cursor0 libxcb-xinerama0 libxkbcommon-x11-0
 ```
-I dunno about other distros through. Good luck finding it because I use DistroBox with Ubuntu. (Confirmed by [@Daveberrys](https://daveberry.netlify.app/))
+I dunno about other distros through. Good luck finding it because I use DistroBox with Ubuntu. (Confirmed by [@Daveberrys](https://codedave.pages.dev/))
 
-If you're using Windows, all you need is WebView2 which is built in. If you somehow don't have WebView2, the link is here: [Download WebView2 here](https://developer.microsoft.com/en-us/microsoft-edge/webview2?form=MA13LH#download) (Confirmed by [@TK50P](https://www.tk50piscool.kro.kr/) & [@Daveberrys](https://daveberry.netlify.app/))
+If you're using Windows, all you need is WebView2 which is built in. If you somehow don't have WebView2, the link is here: [Download WebView2 here](https://developer.microsoft.com/en-us/microsoft-edge/webview2?form=MA13LH#download) (Confirmed by [@TK50P](https://www.tk50piscool.kro.kr/) & [@Daveberrys](https://zcodedave.pages.dev/))
 
 If you're using MacOS, you don't need any libraries to open the app. Just open the app and it'll launch with no problems at all. (Confirmed by [@TK50P](https://www.tk50piscool.kro.kr/))
 
 ## Building WhatsAnApp:
-### In Linux Ubuntu, here are the steps: (Confirmed by [@Daveberrys](https://daveberry.netlify.app/))
+### In Linux Ubuntu, here are the steps: (Confirmed by [@Daveberrys](codedave.pages.dev/))
 ```bash
 sudo apt update && sudo apt install -y python3 python3-pip python3-venv xvfb libxcb-cursor0 libxcb-xinerama0 libxkbcommon-x11-0
 git clone https://github.com/daveberrys/WhatsAnApp/
 cd WhatsAnApp
-rm -rf .git
 python3 -m venv venv
 venv/bin/pip install -r python/requirements-linux.txt
 venv/bin/pyinstaller WhatsAnApp.spec
@@ -97,6 +100,9 @@ venv/bin/pyinstaller WhatsAnApp.spec
 > [!IMPORTANT]
 > Since the module Pythonnet fails to build on Python 3.14.x on Windows, you must downgrade to 3.13.x before setting up the environment.
 
+In windows, you have two options to install it.
+
+#### Option 1:
 ```powershell
 # Install pyenv-win to manage Python versions
 Invoke-WebRequest -UseBasicParsing `
@@ -109,12 +115,23 @@ Invoke-WebRequest -UseBasicParsing `
 # Install and activate Python 3.13 (.11 is latest version As of Jan 10, 2026)
 pyenv install 3.13.11
 pyenv global 3.13.11
+```
 
+#### Option 2:
+```powershell
+# Assuming you have winget installed (which is by-default installed in windows.)
+winget install python3.13
+
+# Then, you can finally just initialize python's virtual environment in 3.13 easily.
+python -3.13 -m venv venv
+```
+
+#### Then finally, the final commands.
+```powershell
 git clone https://github.com/daveberrys/WhatsAnApp/
 cd WhatsAnApp
-rd /s /q .git
 python3 -m venv venv
-venv\Scripts\pip install -r python/requirements.txt
+venv\Scripts\pip install -r python\requirements.txt
 venv\Scripts\pyinstaller WhatsAnApp.spec
 ```
 <details>
@@ -126,7 +143,6 @@ venv\Scripts\pyinstaller WhatsAnApp.spec
 ```bash
 git clone https://github.com/daveberrys/WhatsAnApp/
 cd WhatsAnApp
-rm -rf .git
 python3 -m venv venv
 venv/bin/pip install -r python/requirements.txt
 venv/bin/pyinstaller WhatsAnApp.spec

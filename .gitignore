@@ -1,5 +1,11 @@
+# virtual environment
 .venv
 venv
+
+# python caching
 *.pyc*
+__pycache__
+
+# pyinstaller build
 dist
 build

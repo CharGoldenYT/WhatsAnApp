@@ -24,7 +24,7 @@ else:
         'pywebview',
         'flask'
     ]
-    
+
 a = Analysis(
     ['main.py'],
     pathex=[],
