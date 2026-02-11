@@ -1,6 +1,8 @@
-flask
 pywebview
 pyinstaller
+termcolor
+customtkinter
+
 PyQT5
 PyQtWebEngine
 qtpy

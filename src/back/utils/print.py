@@ -1,33 +1,32 @@
 from termcolor import colored
 from datetime import datetime
 
+# all of these are defined because I like doing `print.success("hi :3")`
+# shut up
 def success(m):
-    t = "  SUCCESS  "
+    s = "  SUCCESS  "
     c = "green"
-    pta(t, c, m)
+    pta(s, c, m)
 def error(m):
-    t = "   ERROR   "
+    s = "   ERROR   "
     c = "light_red"
-    pta(t, c, m)
+    pta(s, c, m)
 def fatal(m):
-    t = "   FATAL   "
+    s = "   FATAL   "
     c = "red"
-    pta(t, c, m)
+    pta(s, c, m)
 def info(m):
-    t = "   INFO    "
+    s = "   INFO    "
     c = "blue"
-    pta(t, c, m)
+    pta(s, c, m)
 def warning(m):
-    t = "  WARNING  "
+    s = "  WARNING  "
     c = "yellow"
-    pta(t, c, m)
+    pta(s, c, m)
 
-def gt():
-    m = datetime.now()
-    fm = m.strftime("%H:%M:%S")
-    return fm
 def pta(t, c, m):
-    fm = gt()
+    dt = datetime.now()
+    fm = dt.strftime("%H:%M:%S")
     print(
         colored(f"( {fm} )", "dark_grey", force_color=True)
         + " - " +
