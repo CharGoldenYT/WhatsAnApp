@@ -1,0 +1,13 @@
+:root {
+    --backgroundColor: #161717;
+    --sidebarColor: #1D1D1F;
+    
+    --textColor: #FFFFFF;
+    --descColor: #A2A299;
+}
+
+body {
+    color: var(--textColor);
+    font-family: sans-serif;
+    background-color: var(--backgroundColor);
+}

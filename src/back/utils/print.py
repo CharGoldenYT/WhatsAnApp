@@ -15,9 +15,9 @@ def fatal(m):
     s = "   FATAL   "
     c = "red"
     pta(s, c, m)
-def info(m):
-    s = "   INFO    "
-    c = "blue"
+def debug(m):
+    s = "   DEBUG   "
+    c = "grey"
     pta(s, c, m)
 def warning(m):
     s = "  WARNING  "
@@ -31,5 +31,6 @@ def pta(t, c, m):
         colored(f"( {fm} )", "dark_grey", force_color=True)
         + " - " +
         colored(f"[{t}]", c, force_color=True)
-        + " " + m
+        + " " +
+        m
     )

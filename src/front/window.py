@@ -9,7 +9,7 @@ def startUp(debugMode=False):
     settings.checkIfExist()
     print.success("Flask and PyWebView is starting! Please wait...")
     if debugMode:
-        print.info("From now on, below this print, PyWebView's logging.")
+        print.debug("From now on, below this print, PyWebView's logging.")
         # whereCSS = "assets/style.css"
         # whereJS = "assets/script.js"
 
@@ -21,14 +21,20 @@ def startUp(debugMode=False):
         #         with open(whereJS, "r") as f:
         #             w.evaluate_js(f.read())
 
-    wv.create_window("WhatsAnApp", "https://web.whatsapp.com/", width=1280, height=720)
+    wv.create_window(
+        "WhatsAnApp",
+        "https://web.whatsapp.com/",
+        width=1280,
+        height=720
+    )
     # waaWindow.events.loaded += lambda: injections(waaWindow)
 
-    projectRoot = os.path.dirname(os.path.abspath(__file__))
+    projectRoot = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
     if not sys.platform == "win32":
         iconPath = os.path.join(projectRoot, "assets", "WhatsAnApp.png")
     else:
         iconPath = os.path.join(projectRoot, "assets", "WhatsAnApp.ico")
+    print.debug(f"Using icon PyWebView icon at: {iconPath}")
 
     wv.start(
         user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",

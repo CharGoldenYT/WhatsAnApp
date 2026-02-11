@@ -1,5 +1,6 @@
 import os
 import sys
+import json
 
 import src.back.utils.print as print
 
@@ -23,7 +24,7 @@ def checkIfExist():
     if not os.path.exists(fullAppConfig):
         print.warning(f"App config not found. Creating one at [{fullAppConfig}]...")
         os.makedirs(fullAppConfig)
-        
+
         os.makedirs(fullAppConfig + "Chromium Storage")
         with open(fullAppConfig + "Chromium Storage/DO NOT SHARE THIS FOLDER. INCLUDING THE OFFICAL DEVS!!!", "w") as f:
             f.write("")

@@ -4,9 +4,9 @@ import sys
 import src.back.system.settings as settings
 import src.back.utils.print as print
 import src.front.window as window
-import src.front.windows.settings as wSettings
+import src.front.windows.page as wSettings
 
-print.info("Starting the app. Please wait...")
+print.debug("Starting the app. Please wait...")
 
 # Starting the app
 
@@ -21,20 +21,20 @@ settingsMode = args.settings
 if debugMode:
     print.success("Debug mode enabled! Please be careful with this.")
 else:
-    print.info("Debug mode isn't enabled. Acting like a regular user.")
+    print.debug("Debug mode isn't enabled. Acting like a regular user.")
 
 if settingsMode:
     if debugMode:
         print.warning("This is completely unnecessary. (Debug Flag with Settings)")
     
     print.success("Completely skipping WhatsAnApp, and initalizing settings.")
-    wSettings.startUp()
+    wSettings.startUp("settings")
 else:
     fullAppConfig = settings.getOS() + settings.appID + "/"
     
-    print.info("WhatsAnApp Infomation:")
-    print.info(f"-> Config path: {fullAppConfig}")
-    print.info(f"-> Operating System: {sys.platform}")
+    print.debug("WhatsAnApp Infomation:")
+    print.debug(f"-> Config path: {fullAppConfig}")
+    print.debug(f"-> Operating System: {sys.platform}")
     
     window.startUp(debugMode)
     print.success("App closing. Goodbye World!")

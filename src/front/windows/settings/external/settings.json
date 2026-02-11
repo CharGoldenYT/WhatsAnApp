@@ -1,0 +1,7 @@
+{
+  "checkForUpdates": {
+    "default": "true",
+    "type": "boolean",
+    "description": "Checks the github for any updates."
+  }
+}
