@@ -1,6 +1,9 @@
-import webview as wv
-import sys
 import os
+import sys
+import threading
+import time
+
+import webview as wv
 
 import src.back.system.settings as settings
 import src.back.utils.print as print
@@ -8,28 +11,19 @@ import src.back.utils.print as print
 def startUp(debugMode=False):
     settings.checkIfExist()
     print.success("Flask and PyWebView is starting! Please wait...")
+
+    projectRoot = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+
     if debugMode:
         print.debug("From now on, below this print, PyWebView's logging.")
-        # whereCSS = "assets/style.css"
-        # whereJS = "assets/script.js"
-
-        # def injections(w):
-        #     if os.path.exists(whereCSS):
-        #         with open(whereCSS, "r") as f:
-        #             w.load_css(f.read())
-        #     if os.path.exists(whereJS):
-        #         with open(whereJS, "r") as f:
-        #             w.evaluate_js(f.read())
 
     wv.create_window(
         "WhatsAnApp",
         "https://web.whatsapp.com/",
         width=1280,
-        height=720
+        height=720,
     )
-    # waaWindow.events.loaded += lambda: injections(waaWindow)
 
-    projectRoot = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
     if not sys.platform == "win32":
         iconPath = os.path.join(projectRoot, "assets", "WhatsAnApp.png")
     else:

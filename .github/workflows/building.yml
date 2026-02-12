@@ -43,15 +43,14 @@ jobs:
                 sudo apt update
                 sudo apt install -y python3-pip python3-venv xvfb libxcb-cursor0 libxcb-xinerama0 libxkbcommon-x11-0
             
-            - name: Install Python dependencies (Windows/MacOS)
-              if: runner.os != 'Linux'
+            - name: Install Python dependencies
               run: |
                 python -m pip install --upgrade pip
-                pip install -r python/requirements.txt
-                
+                pip install -r requirements.txt
+              
             - name: Install Python dependencies (Linux)
               if: runner.os == 'Linux'
-              run: pip install -r python/requirements-linux.txt
+              run: pip install pywebview[qt]
             
             - name: Compile with PyInstaller
               run: pyinstaller WhatsAnApp.spec
@@ -60,7 +59,7 @@ jobs:
               if: runner.os == 'Windows'
               run: move dist\WhatsAnApp.exe ${{ matrix.artifact-path }}
 
-            - name: Rename Build (Linux/MacOS)
+            - name: Rename Build (Linux/macOS)
               if: runner.os != 'Windows'
               run: mv dist/WhatsAnApp ${{ matrix.artifact-path }}
 

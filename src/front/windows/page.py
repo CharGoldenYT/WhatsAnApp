@@ -6,7 +6,7 @@ class Api:
     def printSomething(self):
         print.debug("hello")
 
-def startUp(whereTo):
+def startUp(whereTo, debugMode):
     def loadCSS(window):
         whereCss = os.path.join(os.path.dirname(__file__), "style.css")
         with open(whereCss, "r") as f:
@@ -28,5 +28,6 @@ def startUp(whereTo):
     window.events.loaded += loadCSS
     wv.start(
         private_mode=False,
+        debug=debugMode,
         http_server=True
     )

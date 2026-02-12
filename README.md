@@ -59,7 +59,7 @@ If you want us to add modification (message logs, read receips and such) to What
 
 ## Download for:
 - [Windows](https://nightly.link/daveberrys/WhatsAnApp/workflows/building/main/WhatsAnApp-Windows.zip)
-- [MacOS](https://nightly.link/daveberrys/WhatsAnApp/workflows/building/main/WhatsAnApp-MacOS.zip)
+- [macOS](https://nightly.link/daveberrys/WhatsAnApp/workflows/building/main/WhatsAnApp-macOS.zip)
 - [Linux](https://nightly.link/daveberrys/WhatsAnApp/workflows/building/main/WhatsAnApp-Linux.zip)
 
 ---
@@ -73,7 +73,7 @@ I dunno about other distros through. Good luck finding it because I use DistroBo
 
 If you're using Windows, all you need is WebView2 which is built in. If you somehow don't have WebView2, the link is here: [Download WebView2 here](https://developer.microsoft.com/en-us/microsoft-edge/webview2?form=MA13LH#download) (Confirmed by [@TK50P](https://www.tk50piscool.kro.kr/) & [@Daveberrys](https://zcodedave.pages.dev/))
 
-If you're using MacOS, you don't need any libraries to open the app. Just open the app and it'll launch with no problems at all. (Confirmed by [@TK50P](https://www.tk50piscool.kro.kr/))
+If you're using macOS, you don't need any libraries to open the app. Just open the app and it'll launch with no problems at all. (Confirmed by [@TK50P](https://www.tk50piscool.kro.kr/))
 
 ## Building WhatsAnApp:
 ### In Linux Ubuntu, here are the steps: (Confirmed by [@Daveberrys](codedave.pages.dev/))
@@ -133,7 +133,7 @@ venv\Scripts\pyinstaller WhatsAnApp.spec
      <img src="readme/Windows (TK50P).png"/> 
 </details>
 
-### In MacOS, here are the steps: (Confirmed by [@TK50P](https://www.tk50piscool.kro.kr/))
+### In macOS, here are the steps: (Confirmed by [@TK50P](https://www.tk50piscool.kro.kr/))
 ```bash
 git clone https://github.com/daveberrys/WhatsAnApp/
 cd WhatsAnApp
@@ -143,5 +143,5 @@ venv/bin/pyinstaller WhatsAnApp.spec
 ```
 <details>
     <summary>Screenshot Preview (By TK50P)</summary>
-    <img src="readme/MacOS (TK50P).png"/>
+    <img src="readme/macOS (TK50P).png"/>
 </details>

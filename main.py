@@ -28,7 +28,7 @@ if settingsMode:
         print.warning("This is completely unnecessary. (Debug Flag with Settings)")
     
     print.success("Completely skipping WhatsAnApp, and initalizing settings.")
-    wSettings.startUp("settings")
+    wSettings.startUp("settings", debugMode)
 else:
     fullAppConfig = settings.getOS() + settings.appID + "/"
     
