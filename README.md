@@ -125,7 +125,7 @@ python -3.13 -m venv venv
 git clone https://github.com/daveberrys/WhatsAnApp/
 cd WhatsAnApp
 python3 -m venv venv
-venv\Scripts\pip install -r python\requirements.txt
+venv\Scripts\pip install -r requirements.txt
 venv\Scripts\pyinstaller WhatsAnApp.spec
 ```
 <details>
